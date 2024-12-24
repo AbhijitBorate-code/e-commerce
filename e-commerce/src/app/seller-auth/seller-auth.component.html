@@ -3,10 +3,22 @@
     <form [formGroup]="sellersignup" class="common-form">
       <h1>Seller sign-up</h1>
       <input
+      type="text"
+      class="form-input"
+      formControlName="name"
+      placeholder="Name"
+    />
+    <div>
+      <small *ngIf="sellersignup.get('name')?.hasError?.('required') && sellersignup.get('name')?.touched"
+        >name is required.</small
+      >
+
+    </div>
+      <input
         type="text"
         class="form-input"
         formControlName="email"
-        placeholder="Username"
+        placeholder="Email"
       />
       <div>
         <small *ngIf="sellersignup.get('email')?.hasError?.('required') && sellersignup.get('email')?.touched"
