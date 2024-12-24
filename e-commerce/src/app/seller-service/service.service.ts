@@ -13,7 +13,6 @@ export class ServiceService {
   {
     console.log('user logi11111n', data);
     return this.http.post('http://localhost:3000/seller',data, {observe : 'response'}).subscribe((res : any)=>{
-      console.log('user login  : -----', res);
       this.issellerServerLogedIn.next(true);
       console.log(this.issellerServerLogedIn)
       this.router.navigate(['seller-home']);
