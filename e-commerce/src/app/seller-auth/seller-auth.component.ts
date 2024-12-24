@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServiceService } from '../seller-service/service.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-auth',
@@ -11,7 +12,7 @@ export class SellerAuthComponent implements OnInit {
 
   sellersignup!: FormGroup; // Correct type declaration
 
-  constructor(private fb: FormBuilder, private sellerService : ServiceService) {}
+  constructor(private fb: FormBuilder, private sellerService : ServiceService, private route: Router) {}
 
   ngOnInit() {
     this.sellersignup = this.fb.group({
@@ -23,16 +24,8 @@ export class SellerAuthComponent implements OnInit {
 
   onSubmit() {
     if (this.sellersignup.valid) {
-      console.log('Form Submitted:', this.sellersignup.value);
-      this.sellerService.userSignUp(this.sellersignup.value).subscribe((res)=>{
-        console.log('Response from server', res);
-      })
-
-    } else {
-      console.error('Form is invalid');
-    }
+      this.sellerService.userSignUp(this.sellersignup.value);
   }
-
-
+  }
 
 }
