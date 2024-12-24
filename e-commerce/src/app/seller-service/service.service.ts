@@ -14,6 +14,8 @@ export class ServiceService {
     console.log('user logi11111n', data);
     return this.http.post('http://localhost:3000/seller',data, {observe : 'response'}).subscribe((res : any)=>{
       this.issellerServerLogedIn.next(true);
+      let data = JSON.stringify(res);
+      localStorage.setItem('seller-auth',data)
       console.log(this.issellerServerLogedIn)
       this.router.navigate(['seller-home']);
     });
