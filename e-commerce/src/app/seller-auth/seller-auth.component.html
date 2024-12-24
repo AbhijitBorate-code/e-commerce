@@ -1,0 +1,37 @@
+<div class="seller-auth">
+  <div class="signup">
+    <form [formGroup]="sellersignup" class="common-form">
+      <h1>Seller sign-up</h1>
+      <input
+        type="text"
+        class="form-input"
+        formControlName="email"
+        placeholder="Username"
+      />
+      <div>
+        <small *ngIf="sellersignup.get('email')?.hasError?.('required') && sellersignup.get('email')?.touched"
+          >Email is required.</small
+        >
+        <small *ngIf="sellersignup.get('email')?.hasError?.('email')"
+        >Email is invalid.</small
+      >
+      </div>
+
+      <input
+        type="password"
+        class="form-input"
+        formControlName="password"
+        placeholder="Password"
+      />
+      <div>
+        <small *ngIf="sellersignup.get('password')?.hasError?.('minlength')"
+          >Password must be at least 6 characters long.</small
+        >
+        <small *ngIf="sellersignup.get('password')?.hasError?.('required') && sellersignup.get('password')?.touched"
+        >Password is required.</small>
+      </div>
+
+      <button type="submit" class="form-button" (click)="onSubmit()">Signup</button>
+    </form>
+  </div>
+</div>
