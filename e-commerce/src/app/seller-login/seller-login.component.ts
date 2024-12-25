@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServiceService } from '../seller-service/service.service';
 
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css',
+  selector: 'app-seller-login',
+  templateUrl: './seller-login.component.html',
+  styleUrl: './seller-login.component.css'
 })
-export class LoginPageComponent implements OnInit {
+export class SellerLoginComponent {
   constructor(private fb: FormBuilder, private sellerService: ServiceService) {}
 
   login!: FormGroup;
@@ -18,7 +18,6 @@ export class LoginPageComponent implements OnInit {
     this.login = this.fb.group({
       email: [null, [Validators.email, Validators.required]],
       password: [null, [Validators.minLength(5), Validators.required]],
-      seller : [true]
     });
   }
 

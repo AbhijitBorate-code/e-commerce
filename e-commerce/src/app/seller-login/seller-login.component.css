@@ -1,0 +1,52 @@
+.signup {
+    margin: 152px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.common-form {
+    text-align: center;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+h1 {
+    text-align: center;
+    color: blueviolet;
+}
+
+small {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    margin-bottom: 20px;
+    height: 35px;
+    border: 1px solid blueviolet;
+    color: blueviolet;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.form-button {
+    height: 35px;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: blueviolet;
+    color: white;
+}
+

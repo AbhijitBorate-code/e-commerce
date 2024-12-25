@@ -9,6 +9,7 @@ import {ReactiveFormsModule , FormsModule} from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { SellerLoginComponent } from './seller-login/seller-login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     HomeComponent,
     SellerAuthComponent,
     LoginPageComponent,
-    SellerHomeComponent
+    SellerHomeComponent,
+    SellerLoginComponent
   ],
   imports: [
     BrowserModule,
