@@ -32,6 +32,11 @@
       </div>
 
       <button type="submit" class="form-button" (click)="onSubmit()">Login</button>
+      <small>
+        <input type="checkbox"  formControlName="seller">Are you seller ?
+      </small>
+      <h3 *ngIf="isPassword"
+      >Password  and email is incorrect.</h3>
     </form>
   </div>
 </div>

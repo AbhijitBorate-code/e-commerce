@@ -20,4 +20,15 @@ export class ServiceService {
       this.router.navigate(['seller-home']);
     });
   }
+
+
+  getSellerData(){
+    return this.http.get('http://localhost:3000/seller');
+  }
+
+  onReload(){
+    if(localStorage.getItem('seller-auth')){
+      this.issellerServerLogedIn.next(true);
+    }
+  }
 }

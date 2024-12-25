@@ -77,6 +77,18 @@
       "email": "borate@ril.com",
       "name": "Abhijit",
       "password": "1234567880"
+    },
+    {
+      "id": "fb98",
+      "email": "abhijtborate@ril.com",
+      "name": "Abhijit",
+      "password": "123456"
+    },
+    {
+      "id": "a9fa",
+      "email": "abhijitborate20@gmail.com",
+      "name": "Abhi",
+      "password": "1234567"
     }
   ],
   "products": [
