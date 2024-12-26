@@ -7,32 +7,41 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AuthGuard } from './authentication.guard';
 import { SellerLoginComponent } from './seller-login/seller-login.component';
 import { SignupUserComponent } from './signup-user/signup-user.component';
+import { AddProductListComponent } from './add-product-list/add-product-list.component';
 
 const routes: Routes = [
   {
-    path:'home',
-    component: HomeComponent
+    path:'',
+    component: HomeComponent,
   },
   {
     path:'seller-auth',
-    component:SellerAuthComponent
+    component:SellerAuthComponent,
+
   },
   {
     path : 'seller-home',
     component: SellerHomeComponent,
-    canActivate: [AuthGuard]
   },
   {
     path:'login',
-    component:LoginPageComponent
+    component:LoginPageComponent,
+
   },
   {
     path : 'seller-auth/login',
-    component: SellerLoginComponent
+    component: SellerLoginComponent,
+
   },
   {
     path : 'login/signup',
-    component: SignupUserComponent
+    component: SignupUserComponent,
+
+  },
+  {
+    path:'add-product-list',
+    component: AddProductListComponent,
+
   }
 ];
 

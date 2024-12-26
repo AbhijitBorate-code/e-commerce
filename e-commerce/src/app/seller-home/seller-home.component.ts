@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../seller-service/service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-home',
@@ -7,7 +8,7 @@ import { ServiceService } from '../seller-service/service.service';
   styleUrls: ['./seller-home.component.css'] // Ensure the correct property name is `styleUrls`
 })
 export class SellerHomeComponent implements OnInit {
-  constructor(private sellerService: ServiceService) {}
+  constructor(private sellerService: ServiceService, private router : Router) {}
 
   sellerData: any[] = []; 
 
@@ -24,10 +25,12 @@ export class SellerHomeComponent implements OnInit {
   }
   editItem(e: any) {
     console.log(e)
+
+    this.router.navigate(['add-product-list'], { queryParams: { id: e.id } });
   } 
 
   deleteItem(e: any)  {
-    console.log(e)
+
 
     this.sellerService.deleteProduct(e.id).subscribe((res : any) => {
       console.log('product deleted successfully');

@@ -13,9 +13,6 @@ export class HeaderComponent implements OnInit {
   sellerName : any;
 
   ngOnInit(): void {
-    console.log(
-      'Loading................................?...........................  .................'
-    );
     this.router.events.subscribe((event: any) => {
 
       if (event.url) {
@@ -24,19 +21,10 @@ export class HeaderComponent implements OnInit {
             this.menuType = 'seller';
 
             this.sellerName = localStorage.getItem('seller-home');
-            console.log('sellerName:', JSON.parse(this.sellerName));
             this.sellerName = JSON.parse(this.sellerName).email
-
-  
-            console.log('Seller logged in');
           }
       }
     });
-
-    console.log(
-      this.menuType,
-      '***********************?*****************************************'
-    );
   }
 
 

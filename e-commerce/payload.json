@@ -5,18 +5,12 @@
       "email": "abhijitborate20@gmail.com",
       "name": "Abhijit Borate",
       "password": "12345678"
-    },
-    {
-      "id": "d1f9",
-      "email": "abc@ril.com",
-      "name": "abhi",
-      "password": "1234567"
     }
   ],
   "products": [
     {
       "name": "Samsung m 40 a ",
-      "price": "550",
+      "price": "5500",
       "category": "mobile",
       "color": "white",
       "description": "this is a Samsung product",
@@ -52,7 +46,7 @@
     },
     {
       "name": "Levies Jeans",
-      "price": "5000",
+      "price": "50",
       "category": "Jeans",
       "color": "blue",
       "description": "Confirmable jeans for man ",
@@ -76,6 +70,33 @@
       "description": "Noise smart watch for man",
       "image": "https://www.reliancedigital.in/medias/Noise-Colorfit-Pro-2-Smart-Watch-491900986-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1MDc0NXxpbWFnZS9qcGVnfGltYWdlcy9oYzkvaDdjLzk1OTE4MjA3NDY3ODIuanBnfDA3MjZlMzkzOTExYzMyNzk5Y2YzOTk0MWFkMjc5YjE5OTlkMDE4NzYzYTg1YzQ2YmNjZjMxYzc5ZDJiYjBlNDg",
       "id": "7"
+    },
+    {
+      "id": "5",
+      "name": "Levies Jeans",
+      "price": "5000",
+      "category": "Jeans",
+      "color": "blue",
+      "description": "Confirmable jeans for man ",
+      "image": "https://www.filmibeat.com/wimg/desktop/2012/12/13548612746596.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Samsung m 40 a ",
+      "price": "550",
+      "category": "mobile",
+      "color": "white , black",
+      "description": "this is a Samsung product",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o"
+    },
+    {
+      "id": "1",
+      "name": "Samsung m 40 a ",
+      "price": "550",
+      "category": "mobile",
+      "color": "white",
+      "description": "this is a Samsung product",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o"
     }
   ],
   "users": [

@@ -27,12 +27,26 @@ export class ServiceService {
     return this.http.get('http://localhost:3000/seller');
   }
 
+
+  getProductDataById(id : any){
+    return this.http.get('http://localhost:3000/products/'+id);
+  }
+
+
+  addProduct(data: any) {
+    return this.http.post('http://localhost:3000/products', data).subscribe((res: any) => {
+        console.log('Product added successfully:', res);
+    });
+}
+
   getProductList(){
     return this.http.get('http://localhost:3000/products');
   }
 
   updateProduct(data : any){
-    return this.http.put('http://localhost:3000/products/'+data._id,data);
+    return this.http.put('http://localhost:3000/products/'+data.id,data).subscribe((res: any)=>{
+      console.log('Product updated successfully:', res);
+    });
   }
 
   deleteProduct(id : any){

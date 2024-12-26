@@ -1,0 +1,63 @@
+<div class="seller-auth">
+  <div class="signup">
+    <form [formGroup]="addProduct" class="common-form">
+      <h1 *ngIf="!isEdit">Add Product Here</h1>
+      <h1 *ngIf="isEdit">Edit Product Here</h1>
+
+      <input
+      type="text"
+      class="form-input"
+      formControlName="id"
+      placeholder="ID"
+    />
+      <input
+        type="text"
+        class="form-input"
+        formControlName="name"
+        placeholder="Name"
+      />
+
+      <input
+        type="text"
+        class="form-input"
+        formControlName="price"
+        placeholder="Price"
+      />
+
+      <input
+        type="text"
+        class="form-input"
+        formControlName="category"
+        placeholder="category"
+      />
+
+      <input
+        type="text"
+        class="form-input"
+        formControlName="color"
+        placeholder="color"
+      />
+
+      <input
+      type="text"
+      class="form-input"
+      formControlName="description"
+      placeholder="description"
+    />
+
+    <input
+    type="text"
+    class="form-input"
+    formControlName="image"
+    placeholder="image url"
+  />
+
+      <button *ngIf="!isEdit" type="submit" class="form-button" (click)="onSubmit()">
+        ADD
+      </button>
+      <button *ngIf="isEdit" type="submit" class="form-button" (click)="OnEdit()">
+        Edit
+      </button>
+    </form>
+  </div>
+</div>
