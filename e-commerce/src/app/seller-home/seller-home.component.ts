@@ -22,4 +22,16 @@ export class SellerHomeComponent implements OnInit {
       }
     );
   }
+  editItem(e: any) {
+    console.log(e)
+  } 
+
+  deleteItem(e: any)  {
+    console.log(e)
+
+    this.sellerService.deleteProduct(e.id).subscribe((res : any) => {
+      console.log('product deleted successfully');
+      this.ngOnInit();
+    });
+  }
 }

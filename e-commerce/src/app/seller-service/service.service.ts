@@ -31,6 +31,16 @@ export class ServiceService {
     return this.http.get('http://localhost:3000/products');
   }
 
+  updateProduct(data : any){
+    return this.http.put('http://localhost:3000/products/'+data._id,data);
+  }
+
+  deleteProduct(id : any){
+    return this.http.delete('http://localhost:3000/products/'+id);
+  }
+
+
+
   onReload(){
     if(localStorage.getItem('seller-auth') || localStorage.getItem('seller-home')){
       this.issellerServerLogedIn.next(true);
