@@ -14,7 +14,6 @@ export class SellerHomeComponent implements OnInit {
   ngOnInit() {
     this.sellerService.getProductList().subscribe(
       (seller: any) => {
-        console.log('Product list fetched:', seller);
         if (Array.isArray(seller)) {
           this.sellerData = seller;
         } else if (seller) {

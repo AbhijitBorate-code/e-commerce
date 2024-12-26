@@ -34,7 +34,6 @@ export class SellerLoginComponent {
 
               let data = JSON.stringify(this.login.value)
               localStorage.setItem('seller-home', data);
-              console.log('success');
               this.isPassword = false;
               this.sellerService.issellerServerLogedIn.next(true);
               this.router.navigate(['seller-home'])

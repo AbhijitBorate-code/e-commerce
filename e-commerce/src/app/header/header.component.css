@@ -35,6 +35,10 @@
 
 }
 
+.pointer{
+cursor: pointer;
+}
+
 .nav .nav-search  input{
     flex: 1;
     color :blueviolet !important;

@@ -35,17 +35,11 @@ export class LoginPageComponent implements OnInit {
   
           if (matchingUser) {
             this.isPassword = true; 
-            console.log('Email found, user exists');
           } else {
             this.isPassword = false;
-            console.log('Email not found');
           }
-        } else {
-          console.error('Response is not an array:', users);
-        }
+        } 
       });
-    } else {
-      console.warn('Form is invalid!');
-    }
+    } 
   }
 }
