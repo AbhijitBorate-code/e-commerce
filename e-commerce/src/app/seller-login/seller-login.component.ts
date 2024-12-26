@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServiceService } from '../seller-service/service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-login',
@@ -8,7 +9,7 @@ import { ServiceService } from '../seller-service/service.service';
   styleUrl: './seller-login.component.css'
 })
 export class SellerLoginComponent {
-  constructor(private fb: FormBuilder, private sellerService: ServiceService) {}
+  constructor(private fb: FormBuilder, private sellerService: ServiceService, private router : Router) {}
 
   login!: FormGroup;
 
@@ -22,7 +23,7 @@ export class SellerLoginComponent {
   }
 
   onSubmit() {
-    if (this.login.valid && this.login.get('seller')?.value) {
+    if (this.login.valid) {
       this.sellerService.getSellerData().subscribe((res) => {
         if (Array.isArray(res)) {
           res.forEach((element) => {
@@ -30,10 +31,13 @@ export class SellerLoginComponent {
               element.email == this.login.get('email')?.value &&
               element.password == this.login.get('password')?.value
             ) {
-              localStorage.setItem('seller-auth', this.login.value);
+
+              let data = JSON.stringify(this.login.value)
+              localStorage.setItem('seller-home', data);
               console.log('success');
               this.isPassword = false;
               this.sellerService.issellerServerLogedIn.next(true);
+              this.router.navigate(['seller-home'])
             } else {
               this.isPassword = true;
             }

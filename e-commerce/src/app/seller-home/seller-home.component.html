@@ -1,1 +1,7 @@
-<p>seller-home works!</p>
+<div class="card" *ngFor="let item of sellerData">
+    <img [src]="item.image || '/default-image.jpg'" alt="Product Image" style="width:100%">
+    <h1>{{ item.name }}</h1>
+    <p class="price">{{ item.price | currency }}</p>
+    <p>{{ item.description || 'No description available.' }}</p>
+  </div>
+  

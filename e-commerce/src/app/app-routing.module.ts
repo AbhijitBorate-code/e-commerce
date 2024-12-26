@@ -6,6 +6,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AuthGuard } from './authentication.guard';
 import { SellerLoginComponent } from './seller-login/seller-login.component';
+import { SignupUserComponent } from './signup-user/signup-user.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path : 'seller-auth/login',
     component: SellerLoginComponent
+  },
+  {
+    path : 'login/signup',
+    component: SignupUserComponent
   }
 ];
 

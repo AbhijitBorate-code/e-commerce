@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../seller-service/service.service';
 
 @Component({
   selector: 'app-seller-home',
   templateUrl: './seller-home.component.html',
-  styleUrl: './seller-home.component.css'
+  styleUrls: ['./seller-home.component.css'] // Ensure the correct property name is `styleUrls`
 })
-export class SellerHomeComponent {
+export class SellerHomeComponent implements OnInit {
+  constructor(private sellerService: ServiceService) {}
 
+  sellerData: any[] = []; 
+
+  ngOnInit() {
+    this.sellerService.getProductList().subscribe(
+      (seller: any) => {
+        console.log('Product list fetched:', seller);
+        if (Array.isArray(seller)) {
+          this.sellerData = seller;
+        } else if (seller) {
+          this.sellerData.push(seller); 
+        }
+      }
+    );
+  }
 }

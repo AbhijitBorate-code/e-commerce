@@ -19,13 +19,6 @@ h1 {
     color: blueviolet;
 }
 
-.small-color {
-    color: blue;
-    font-size: 12px;
-    text-align: left;
-    display: block;
-    margin-bottom: 5px;
-}
 small {
     color: red;
     font-size: 12px;

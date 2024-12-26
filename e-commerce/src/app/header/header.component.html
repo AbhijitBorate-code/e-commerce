@@ -1,21 +1,41 @@
 <nav class="nav">
   <h1>E-COM</h1>
-  <div class="nav-search">
+
+  <!-- Default menu search bar -->
+  <div *ngIf="menuType === 'default'" class="nav-search">
     <input type="text" placeholder="Search here..." />
     <button>Search</button>
   </div>
-  <ul>
-    <li>
-      <a routerLink="home" routerLinkActive="active">Home</a>
-    </li>
-    <li>
-      <a routerLink="seller-auth" routerLinkActive="active">seller</a>
-    </li>
-    <li>
-      <a routerLink="login" routerLinkActive="active">Login</a>
-    </li>
-    <li>
-      <a routerLink="seller-home" routerLinkActive="active">Cart</a>
-    </li>
-  </ul>
+
+  <!-- Navigation menus based on menuType -->
+  <div [ngSwitch]="menuType">
+    <!-- Default menu -->
+    <ul *ngSwitchCase="'default'">
+      <li>
+        <a routerLink="home" routerLinkActive="active">Home</a>
+      </li>
+      <li>
+        <a routerLink="seller-auth" routerLinkActive="active">Seller</a>
+      </li>
+      <li>
+        <a routerLink="login" routerLinkActive="active">Login</a>
+      </li>
+      <li>
+        <a routerLink="seller-home" routerLinkActive="active">Cart</a>
+      </li>
+    </ul>
+
+    <!-- Seller menu -->
+    <ul *ngSwitchCase="'seller'">
+      <li>
+        <a routerLink="add-product" routerLinkActive="active">Add Product</a>
+      </li>
+      <li>
+        <a  routerLinkActive="active"  (click)="logoutSeller()">Logout</a>
+      </li>
+      <li>
+        <a >{{sellerName | titlecase}} </a>
+      </li>
+    </ul>
+  </div>
 </nav>

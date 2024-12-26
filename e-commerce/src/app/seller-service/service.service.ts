@@ -11,8 +11,9 @@ export class ServiceService {
   issellerServerLogedIn =  new BehaviorSubject<any>(false);
   userSignUp(data : any)
   {
-    console.log('user logi11111n', data);
+    console.log('user', data);
     return this.http.post('http://localhost:3000/seller',data, {observe : 'response'}).subscribe((res : any)=>{
+      console.log('user **********************', res)
       this.issellerServerLogedIn.next(true);
       let data = JSON.stringify(res);
       localStorage.setItem('seller-auth',data)
@@ -26,9 +27,15 @@ export class ServiceService {
     return this.http.get('http://localhost:3000/seller');
   }
 
+  getProductList(){
+    return this.http.get('http://localhost:3000/products');
+  }
+
   onReload(){
-    if(localStorage.getItem('seller-auth')){
+    if(localStorage.getItem('seller-auth') || localStorage.getItem('seller-home')){
       this.issellerServerLogedIn.next(true);
     }
   }
 }
+
+

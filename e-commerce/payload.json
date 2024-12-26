@@ -1,93 +1,15 @@
 {
   "seller": [
     {
-      "name": "sam sidhu",
-      "email": "sam@seller.com",
-      "password": "abc@123",
-      "id": "2"
-    },
-    {
-      "name": "peter",
-      "password": "abc@123",
-      "email": "peter@test.com",
-      "id": "3"
-    },
-    {
-      "name": "bruce",
-      "password": "abc@123",
-      "email": "bruce@test.com",
-      "id": "4"
-    },
-    {
-      "name": "anil",
-      "password": "abc123",
-      "email": "anil@test.com",
-      "id": "5"
-    },
-    {
-      "name": "alena",
-      "password": "abc123",
-      "email": "alena@test.com",
-      "id": "6"
-    },
-    {
-      "name": "sam",
-      "password": "abc@123",
-      "email": "sam@test.com",
-      "id": "7"
-    },
-    {
-      "name": "bhasker",
-      "password": "abc@123",
-      "email": "bhasker@test.com",
-      "id": "8"
-    },
-    {
-      "id": "327a",
-      "email": "shdgsh@ril.com",
-      "name": "Abh",
-      "password": "shghsgdhsgh"
-    },
-    {
-      "id": "f1ee",
-      "email": "shdgsh@ril.com",
-      "name": "Abhijit",
-      "password": "shghsgdhsgh"
-    },
-    {
-      "id": "7235",
-      "email": "abc@ril.com",
-      "name": "Abhd",
-      "password": "123455"
-    },
-    {
-      "id": "0e55",
-      "email": "abhi@ril.com",
-      "name": "Abhijit",
-      "password": "123456"
-    },
-    {
-      "id": "8cdc",
-      "email": "abc@ril.com",
-      "name": "Abhi",
-      "password": "123445667"
-    },
-    {
-      "id": "e41a",
-      "email": "borate@ril.com",
-      "name": "Abhijit",
-      "password": "1234567880"
-    },
-    {
-      "id": "fb98",
-      "email": "abhijtborate@ril.com",
-      "name": "Abhijit",
-      "password": "123456"
-    },
-    {
-      "id": "a9fa",
+      "id": "a594",
       "email": "abhijitborate20@gmail.com",
-      "name": "Abhi",
+      "name": "Abhijit Borate",
+      "password": "12345678"
+    },
+    {
+      "id": "d1f9",
+      "email": "abc@ril.com",
+      "name": "abhi",
       "password": "1234567"
     }
   ],
@@ -139,7 +61,7 @@
     },
     {
       "name": "Truck",
-      "price": "Toy",
+      "price": "100",
       "category": "Toys",
       "color": "Red",
       "description": "A toy for 5 year old child",

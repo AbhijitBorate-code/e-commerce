@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { ServiceService } from './seller-service/service.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,14 @@ import { ServiceService } from './seller-service/service.service';
 export class AppComponent implements OnInit  {
   title = 'e-commerce';
 
-  constructor(private sellerAuth : ServiceService){}
+  constructor(private sellerAuth : ServiceService , private router : Router , private activateRoute : ActivatedRoute){}
+
+
+  isSeller : boolean = false;
 
   ngOnInit(){
       this.sellerAuth.onReload();
+      
   }
 
 }

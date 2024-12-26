@@ -10,6 +10,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerLoginComponent } from './seller-login/seller-login.component';
+import { SignupUserComponent } from './signup-user/signup-user.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SellerLoginComponent } from './seller-login/seller-login.component';
     SellerAuthComponent,
     LoginPageComponent,
     SellerHomeComponent,
-    SellerLoginComponent
+    SellerLoginComponent,
+    SignupUserComponent
   ],
   imports: [
     BrowserModule,
