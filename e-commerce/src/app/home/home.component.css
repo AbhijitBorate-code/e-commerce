@@ -1,0 +1,77 @@
+.card {
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px; 
+    height: 400px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    vertical-align: top;
+    padding: 5px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+    height: 5px;
+  }
+  
+  .description{
+    text-wrap: wrap;
+  }
+  .card-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center-align buttons */
+}
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px; /* Dynamic sizing based on content */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size for readability */
+    flex-grow: 1; /* Optional: Distribute space evenly in a flex container */
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+
+
+
+  
+  .card .card-content {
+    height: 160px; /* Adjust content area size */
+    overflow: hidden; /* Prevent overflow if content exceeds space */
+    padding: 10px;
+  }
+  

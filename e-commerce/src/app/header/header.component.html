@@ -1,5 +1,5 @@
 <nav class="nav">
-  <h1>E-COM</h1>
+  <h1 routerLink="">E-COM</h1>
 
   <!-- Default menu search bar -->
   <div *ngIf="menuType === 'default'" class="nav-search">
@@ -12,7 +12,7 @@
     <!-- Default menu -->
     <ul *ngSwitchCase="'default'">
       <li>
-        <a routerLink="home" routerLinkActive="active">Home</a>
+        <a routerLink="" routerLinkActive="active">Home</a>
       </li>
       <li>
         <a routerLink="seller-auth" routerLinkActive="active">Seller</a>
