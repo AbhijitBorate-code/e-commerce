@@ -1,6 +1,9 @@
 .nav {
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
+    height: 70px;
+    /* background-color: aquamarine; */
 }
 
 .nav h1 {
@@ -48,7 +51,6 @@ cursor: pointer;
 }
 
 .nav .nav-search  button{
-    /* flex: 1; */
     color :blueviolet !important;
     border: 1px solid blueviolet    ;
     height: 39px;

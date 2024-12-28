@@ -29,12 +29,7 @@ export class HomeComponent {
     this.router.navigate(['add-product-list'], { queryParams: { id: e.id } });
   } 
 
-  deleteItem(e: any)  {
+  addToCart(e: any)  {
 
-
-    this.sellerService.deleteProduct(e.id).subscribe((res : any) => {
-      console.log('product deleted successfully');
-      this.ngOnInit();
-    });
   }
 }

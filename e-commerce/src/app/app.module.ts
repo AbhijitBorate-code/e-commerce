@@ -12,6 +12,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerLoginComponent } from './seller-login/seller-login.component';
 import { SignupUserComponent } from './signup-user/signup-user.component';
 import { AddProductListComponent } from './add-product-list/add-product-list.component';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AddProductListComponent } from './add-product-list/add-product-list.com
     SellerHomeComponent,
     SellerLoginComponent,
     SignupUserComponent,
-    AddProductListComponent
+    AddProductListComponent,
+    AddToCartComponent
   ],
   imports: [
     BrowserModule,

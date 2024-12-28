@@ -4,7 +4,7 @@
     <p class="price">{{ item.price | currency }}</p>
     <p class="description">{{ item.description || 'No description available.' }}</p>
     <div class="card-buttons">
-        <button (click)="editItem(item)">ADD TO CART</button>
+        <button (click)="addToCart(item)">ADD TO CART</button>
     </div>
   </div>
   

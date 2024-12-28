@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
             this.menuType = 'seller';
 
             this.sellerName = localStorage.getItem('seller-home');
-            this.sellerName = JSON.parse(this.sellerName).email
+            this.sellerName = JSON?.parse(this.sellerName)?.email
           }
       }
     });
