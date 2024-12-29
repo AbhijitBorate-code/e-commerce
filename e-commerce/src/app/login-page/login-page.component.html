@@ -3,19 +3,6 @@
     <form [formGroup]="login" class="common-form">
       <h1>Login User</h1>
       <input
-      type="text"
-      class="form-input"
-      formControlName="name"
-      placeholder="Name"
-    />
-    <div>
-      <small *ngIf="login.get('name')?.hasError?.('required') && login.get('name')?.touched"
-        >Name is required.</small
-      >
-    </div>
-
-
-      <input
         type="text"
         class="form-input"
         formControlName="email"
@@ -45,10 +32,11 @@
       </div>
 
       <button type="submit" class="form-button" (click)="onSubmit()">Login</button>
-      <small>Signup Here  <a routerLink="signup" routerLinkActive="active">Link</a></small>
-
       <small   class="small-color" *ngIf="isPassword"
       >Password  and email is incorrect.</small>
+      <span class="color-red">You Don't Have Account.  <a routerLink="signup" routerLinkActive="active">Click</a></span>
+
+
     </form>
   </div>
 </div>

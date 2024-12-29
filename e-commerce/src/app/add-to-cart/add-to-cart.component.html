@@ -1,1 +1,13 @@
-<p>add-to-cart works!</p>
+<div class="addToCart">
+    <h2>Your Cart Details</h2>
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <img [src]="item.image || '/default-image.jpg'" alt="Product Image" class="cart-image" />
+      <div class="cart-details">
+        <h3 class="cart-title">{{ item.name }}</h3>
+        <p class="cart-description">{{ item.description || 'No description available.' }}</p>
+        <p class="cart-price">Price: ₹{{ item.price }}</p>
+        <button class="remove-btn" (click)="removeFromCart(item)">Remove</button>
+      </div>
+    </div>
+  </div>
+  

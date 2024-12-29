@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServiceService } from '../common-service/service.service';
 import { UsersService } from '../common-service/users.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { UsersService } from '../common-service/users.service';
   styleUrl: './signup-user.component.css'
 })
 export class SignupUserComponent {
-  constructor(private fb: FormBuilder, private sellerService: ServiceService, private userService : UsersService) {}
+  constructor(private fb: FormBuilder, private sellerService: ServiceService, private userService : UsersService, private router : Router) {}
 
   login!: FormGroup;
 
@@ -27,7 +28,13 @@ export class SignupUserComponent {
   onSubmit() {
     if(this.login?.valid)
       {
-        this.userService.putUSerData(this.login?.value)
+        this.userService.putUSerData(this.login?.value);
+        this.userService.isUserLoggedIn.next(true);
+        localStorage.setItem('user-login',JSON.stringify(this.login.value));
+        console.log('Login Successful')
+        localStorage.setItem('userName','user')
+        this.router.navigate(['Home']);
+           
       }
   }
   

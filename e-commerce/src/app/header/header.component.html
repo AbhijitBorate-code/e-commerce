@@ -2,7 +2,7 @@
   <h1 routerLink="" class="pointer">E-COM</h1>
 
   <!-- Default menu search bar -->
-  <div *ngIf="menuType === 'default'" class="nav-search">
+  <div *ngIf="menuType !== 'seller'" class="nav-search">
     <input type="text" placeholder="Search here..." />
     <button>Search</button>
   </div>
@@ -20,21 +20,34 @@
       <li>
         <a routerLink="login" routerLinkActive="active">Login</a>
       </li>
+    </ul>
+
+    <!-- User menu -->
+    <ul *ngSwitchCase="'user'">
       <li>
-        <a routerLink="seller-home" routerLinkActive="active">Cart</a>
+        <a routerLink="" routerLinkActive="active">Home</a>
+      </li>
+      <li>
+        <a routerLink="home" (click)="logoutUser()" routerLinkActive="active">Logout</a>
+      </li>
+      <li>
+        <a routerLink="add-to-cart" routerLinkActive="active">Cart</a>
+      </li>
+      <li>
+        <a  routerLinkActive="active">{{userName}}</a>
       </li>
     </ul>
 
     <!-- Seller menu -->
     <ul *ngSwitchCase="'seller'">
       <li>
-        <a  routerLink="add-product-list"   routerLinkActive="active">Add Product</a>
+        <a routerLink="add-product-list" routerLinkActive="active">Add Product</a>
       </li>
       <li>
-        <a  routerLinkActive="active"  (click)="logoutSeller()">Logout</a>
+        <a routerLinkActive="active" (click)="logoutSeller()">Logout</a>
       </li>
       <li>
-        <a routerLinkActive="active" class="pointer" >{{sellerName | titlecase}} </a>
+        <a routerLinkActive="active" class="pointer">{{sellerName | titlecase}}</a>
       </li>
     </ul>
   </div>

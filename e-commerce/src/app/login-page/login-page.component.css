@@ -20,11 +20,16 @@ h1 {
 }
 
 .small-color {
-    color: blue;
+    color: red;
     font-size: 12px;
     text-align: left;
     display: block;
     margin-bottom: 5px;
+    margin-top: 10px;
+}
+.color-red{
+color: red;
+margin-top: 10px;
 }
 small {
     color: red;

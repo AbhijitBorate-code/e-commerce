@@ -111,6 +111,18 @@
       "email": "tony@user.com",
       "password": "abc123",
       "id": "4"
+    },
+    {
+      "id": "3e3e",
+      "email": "abhi@user.com",
+      "password": "12345678",
+      "name": "Abhijit"
+    },
+    {
+      "id": "0ab8",
+      "email": "abc@ril.com",
+      "password": "1234567",
+      "name": "Abhijit "
     }
   ],
   "cart": [

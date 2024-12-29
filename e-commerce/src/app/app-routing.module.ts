@@ -8,6 +8,8 @@ import { AuthGuard } from './authentication.guard';
 import { SellerLoginComponent } from './seller-login/seller-login.component';
 import { SignupUserComponent } from './signup-user/signup-user.component';
 import { AddProductListComponent } from './add-product-list/add-product-list.component';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { UserAuthGuard } from './user-auth.guard';
 
 const routes: Routes = [
   {
@@ -42,7 +44,16 @@ const routes: Routes = [
     path:'add-product-list',
     component: AddProductListComponent,
 
-  }
+  },
+  {
+    path:'add-to-cart',
+    component:AddToCartComponent,
+    canActivate:[UserAuthGuard]
+  },
+  {
+    path:'Home',
+    component: HomeComponent,
+  },
 ];
 
 @NgModule({
