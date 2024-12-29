@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UsersService } from '../seller-service/users.service';
+import { UsersService } from '../common-service/users.service';
 
 @Component({
   selector: 'app-login-page',

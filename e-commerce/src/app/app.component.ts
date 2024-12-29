@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
-import { ServiceService } from './seller-service/service.service';
+import { ServiceService } from './common-service/service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
