@@ -5,6 +5,10 @@
     border-radius: 10px;
     background-color: #f9f9f9;
 }
+.color-red{
+    color: red;
+    margin-top: 10px;
+    }
 
 .common-form {
     text-align: center;

@@ -123,6 +123,12 @@
       "email": "abc@ril.com",
       "password": "1234567",
       "name": "Abhijit "
+    },
+    {
+      "id": "d7c9",
+      "email": "abc@ril.com",
+      "password": "1234567",
+      "name": "abhi"
     }
   ],
   "cart": [
