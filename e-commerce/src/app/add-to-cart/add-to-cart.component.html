@@ -6,8 +6,11 @@
         <h3 class="cart-title">{{ item.name }}</h3>
         <p class="cart-description">{{ item.description || 'No description available.' }}</p>
         <p class="cart-price">Price: ₹{{ item.price }}</p>
-        <button class="remove-btn" (click)="removeFromCart(item)">Remove</button>
+        <!-- <button class="remove-btn" (click)="removeFromCart(item)">Remove</button> -->
       </div>
+      <button class="remove-btn" (click)="removeFromCart(item)">Remove</button>
     </div>
+    <p class="price-total">Total Price: ₹{{ totalPrice }}</p>
+    <button class="purchase-btn">Buy</button>
   </div>
   

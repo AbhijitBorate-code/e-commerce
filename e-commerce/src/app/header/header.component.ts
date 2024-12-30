@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   menuType: any = 'default';
   sellerName: any;
   userName: any;
+  productCount: any;
 
   ngOnInit(): void {
     this.router.events.subscribe((event: any) => {
@@ -32,8 +33,11 @@ export class HeaderComponent implements OnInit {
         ) {
           this.menuType = 'user';
           this.userName = localStorage.getItem('user-login');
+
           this.userService.isUserLoggedIn.next(true);
           this.userName = JSON.parse(this.userName)?.name;
+          this.productCount = localStorage.getItem('productCount');
+          console.log(this.productCount)
         }
       }
     });
@@ -47,6 +51,7 @@ export class HeaderComponent implements OnInit {
 
   logoutUser() {
     localStorage.removeItem('user-login');
+    localStorage.removeItem('productCount');
     this.router.navigate(['login']);
     this.menuType = 'default';
   }

@@ -1,4 +1,23 @@
-/* Main container for cart */
+.price-total{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+.purchase-btn{
+    width: 100px;
+    height: 40px;
+    background: #235323;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease; 
+}
+
+.purchase-btn:hover{
+    background: #235323;
+    transform: scale(1.1); 
+
+}
 .addToCart {
     margin: 20px auto;
     max-width: 800px;
